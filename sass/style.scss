@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+$very-dark-blue: hsl(243, 87%, 12%);
+$desaturated-blue: hsl(238, 22%, 44%);
+$bright-blue: hsl(224, 93%, 58%);
+$moderate-cyan: hsl(170, 45%, 43%);
+$light-grayish-blue: hsl(240, 75%, 98%);
+$light-gray: hsl(0, 0%, 75%);
+
+@keyframes slideInFromAbove {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromBelow {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  color: $light-gray;
+}
+
+:-ms-input-placeholder {
+  color: $light-gray;
+}
+
+::placeholder {
+  color: $light-gray;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+}
+
+h1,
+h3,
+h4,
+h6,
+nav,
+button {
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h3,
+h4,
+h6 {
+  font-weight: bolder;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5%;
+  animation: 1s ease-out 0s 1 slideInFromAbove;
+
+  .header-logo {
+    width: 6rem;
+
+  }
+}
+
+nav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-size: 3.5vw;
+
+    li {
+      padding: 0 0.5rem;
+
+      a {
+        text-decoration: none;
+        color: $very-dark-blue;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: $bright-blue;
+          color: #fff;
+          text-decoration: underline;
+          border-radius: 2rem;
+
+        }
+      }
+    }
+  }
+}
+
+form {
+  input {
+    border: 1px solid $very-dark-blue;
+    border-radius: 0.2rem;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: $bright-blue;
+    border: none;
+    border-radius: 0.2rem;
+    color: #fff;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    width: 100%;
+
+    &:hover {
+      background-color: $very-dark-blue;
+      transition: ease-out 1s;
+    }
+
+  }
+}
+
+.section-one {
+  background-image: url(/images/bg-curve-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 15% 7% 30%;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+
+  h1 {
+    font-size: 6.5vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+
+  form {
+    margin: 10% 1%;
+  }
+}
+
+.section-two {
+  background-color: $light-grayish-blue;
+  padding: 7%;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+
+  h4 {
+    font-size: 4.2vw;
+    margin-top: 20%;
+  }
+
+  p {
+    font-size: 3.7vw;
+    color: $desaturated-blue;
+    text-align: left;
+  }
+
+  a {
+    color: $moderate-cyan;
+    text-decoration: none;
+    font-size: 3.5vw;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid $moderate-cyan;
+
+    &:hover {
+      img {
+        transform: translateX(10px);
+        transition: 1s;
+      }
+    }
+
+    img {
+      position: relative;
+      top: 0.2rem;
+
+    }
+  }
+}
+
+
+.quote-section {
+
+  padding: 5% 5% 15%;
+}
+
+article {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 7% 7% 0;
+  margin-top: 10%;
+  font-size: 0.6rem;
+  box-shadow: 0 0 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: scale(1.1);
+    transition: ease-out 1s;
+  }
+
+  p {
+    color: #000 !important;
+    font-size: 2.8vw !important;
+  }
+}
+
+.quotes {
+  width: 2rem;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 4vw;
+  margin-top: -5%;
+
+  img {
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: 50%;
+    margin-right: 0.8em;
+  }
+
+  span {
+    font-size: 2vw;
+  }
+}
+
+.section-three {
+  background-color: $desaturated-blue;
+  color: #fff;
+  padding: 10% 10% 15%;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+
+  h3 {
+    font-size: 4.5vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+
+  form {
+    margin: 10%;
+
+    input {
+      padding: 0.7em;
+    }
+
+    button {
+      padding: 0.7em;
+      margin-top: 0.5em;
+      font-weight: 400;
+    }
+  }
+}
+
+footer {
+  background-color: $very-dark-blue;
+  color: #fff;
+  text-align: left;
+  padding: 20% 5% 0%;
+  animation: 1s ease-out 0s 1 slideInFromBelow;
+
+  img {
+    filter: brightness(0) invert(1);
+    width: 50%;
+    height: auto;
+  }
+
+  .contact {
+    margin-top: 7%;
+    font-size: 5vw;
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      height: 2em;
+
+      .contact-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .link-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 0;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 4vw;
+      margin-bottom: 5%;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .social-links {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    .fab {
+      border: 1px solid #fff;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2rem;
+      margin: 0.5rem;
+      cursor: pointer;
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  .section-one {
+    background-image: url(/images/bg-curve-desktop.svg);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  header {
+    margin: 5% 6%;
+
+    .header-logo {
+      width: 12rem;
+    }
+  }
+
+  nav {
+    ul {
+      font-size: 1.5vw;
+
+      li {
+        padding: 0 2rem;
+      }
+    }
+  }
+
+  .section-content {
+    margin-right: 2%;
+  }
+
+  .section-one {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+    padding: 3% 7% 15%;
+
+    h1 {
+      font-size: 2.9vw;
+      margin: 5% 0 2%;
+
+    }
+
+    p {
+      font-size: 1.5vw;
+
+    }
+
+    form {
+      display: flex;
+      margin: 10% 1%;
+      width: 80%;
+      margin: 1% 0;
+
+      button {
+        margin: 0;
+        width: 50%;
+      }
+
+      input {
+        margin-right: 2%;
+      }
+    }
+  }
+
+  .section-two {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+    padding: 4% 7%;
+
+
+    .section-image {
+      width: 60%;
+    }
+
+    h4 {
+      font-size: 2.7vw;
+      margin-top: 0%;
+    }
+
+    p {
+      font-size: 1.2vw;
+      width: 90%;
+    }
+
+    a {
+      font-size: 1.2vw;
+
+
+
+      img {
+
+        position: relative;
+        top: 0.2rem;
+      }
+    }
+  }
+
+  .quote-section {
+    padding: 0% 50% 5% 0%;
+    ;
+  }
+
+  article {
+    padding: 7% 7% 0;
+
+    p {
+      font-size: 0.9vw !important;
+    }
+  }
+
+  .quotes {
+    width: 2rem;
+  }
+
+  .testimonial {
+    font-size: 1.4vw;
+
+    span {
+      font-size: 0.8vw;
+    }
+  }
+
+  .section-three {
+    display: flex;
+    align-items: center;
+    padding: 0% 7%;
+    text-align: left;
+
+
+    h3 {
+      font-size: 1.8vw;
+    }
+
+    p {
+      font-size: 1vw;
+    }
+
+    form {
+      margin: 10%;
+      width: 100%;
+
+      input {
+        padding: 0.9em;
+      }
+
+      button {
+        padding: 0.9em;
+        margin-top: 0.7em;
+        width: 40%;
+      }
+    }
+  }
+
+  footer {
+    padding: 5% 7% 0%;
+
+    img {
+      width: 12%;
+    }
+
+    .company-links {
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .contact {
+
+      font-size: 1.1vw;
+      width: 20%;
+      margin-top: 0%;
+
+      .contact-item {
+        height: 3em;
+
+        .contact-icon {
+          margin-right: 5%;
+          width: 1.2rem;
+          height: 1.2rem;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .links {
+      width: 30%;
+      margin-top: -2%;
+
+    }
+
+    .link-group {
+
+
+      a {
+        font-size: 1.1vw;
+
+      }
+
+    }
+
+  }
+
+
+}
